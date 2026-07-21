@@ -67,8 +67,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/api/tickets", (req, res) => {
-  res.json(tickets);
+app.get("/", (req, res) => {
+  res.json({
+    message: "IT Support Ticket System API läuft",
+  });
 });
 
 app.post("/api/tickets", (req, res) => {
