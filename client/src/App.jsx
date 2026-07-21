@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./index.css";
 
-const API_URL = `${
-  import.meta.env.VITE_API_URL || "http://localhost:5002"
-}/api/tickets`;
+const API_URL = "https://support-ticket-system-yyj0.onrender.com/api/tickets";
 
 function App() {
   const [tickets, setTickets] = useState([]);
