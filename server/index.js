@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5002;
+const PORT = process.env.PORT || 5002;
 
 app.use(cors());
 app.use(express.json());
@@ -185,6 +185,6 @@ app.delete("/api/tickets/:id", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`IT Support Ticket System API läuft auf http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`IT Support Ticket System API läuft auf Port ${PORT}`);
 });
