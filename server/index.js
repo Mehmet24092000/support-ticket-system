@@ -43,8 +43,7 @@ let tickets = [
   {
     id: 3,
     title: "Drucker verbindet sich nicht",
-    description:
-      "Der Bürodrucker wird nicht mehr im Netzwerk angezeigt.",
+    description: "Der Bürodrucker wird nicht mehr im Netzwerk angezeigt.",
     category: "Netzwerk",
     priority: "Niedrig",
     status: "Erledigt",
@@ -67,10 +66,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.json({
-    message: "IT Support Ticket System API läuft",
-  });
+app.get("/api/tickets", (req, res) => {
+  res.json(tickets);
 });
 
 app.post("/api/tickets", (req, res) => {
